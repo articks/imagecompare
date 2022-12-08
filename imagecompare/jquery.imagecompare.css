@@ -1,0 +1,75 @@
+/*
+ * ==================================================
+ *
+ * jqueryImageCompare v.1
+ *
+ * Apache License 2.0
+ *
+ * Copyright 2022 dima@karasev.pro
+ *
+ * <ul class="jqueryImageCompare" data-ratio="5x3">
+ *     <li data-image="/path/to/image1.jpg"></li>
+ *     <li data-image="/path/to/image2.jpg"></li>
+ *     ...
+ *     <li data-image="/path/to/imagen.jpg"></li>
+ * </ul>
+ *
+ * ==================================================
+ */
+.jqueryImageCompare {
+    display:block;
+    box-sizing:border-box;
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+    margin:0;
+    padding:0;
+    list-style:none;
+    padding-top:33.3333%;
+}
+.jqueryImageCompare>* {
+    display:block;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    list-style:none;
+    box-shadow:1px 0 0 0 rgba(255,255,255,0.5),2px 0 0 0 rgba(0,0,0,0.1);
+    background-repeat:no-repeat;
+    background-size:0;
+    background-position:1000% 1000%;
+    position:absolute;
+    overflow:hidden;
+    transition:all 0.3s linear;
+    left:0;
+    top:0;
+    bottom:0;
+    height:100%;
+    width:calc( ( 100% / var(--count) ) * var(--index) );
+    z-index:calc( var(--count) - var(--index) + 1 );
+}
+.jqueryImageCompare:hover>*:not(:hover) {
+    width:0;
+}
+.jqueryImageCompare>*:hover {
+    width:100%;
+}
+.jqueryImageCompare>*:hover ~ * {
+    width:100% !important;
+}
+.jqueryImageCompare>*::before {
+    content:"";
+    display:block;
+    box-sizing:border-box;
+    background-image:inherit;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    transition:all 0.3s linear;
+    position:absolute;
+    top:0;
+    bottom:0;
+    height:100%;
+    overflow:hidden;
+    left:0;
+    width:var(--width);
+}
