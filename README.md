@@ -7,8 +7,9 @@ jQuery Multi Image Compare Plugin
 1. ADD TO HEAD
 
 ```
-<link rel="stylesheet" type="text/css" href="/imagecompare/jquery.imagecompare.min.css" />
-<script type="text/javascript" src="/imagecompare/jquery.imagecompare.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://articks.github.io/imagecompare/jquery.imagecompare.min.css" />
+<script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+<script src="https://articks.github.io/imagecompare/jquery.imagecompare.min.js"></script>
 ```
 
 2. ADD HTML
