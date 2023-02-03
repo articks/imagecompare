@@ -73,3 +73,26 @@
     left:0;
     width:var(--width);
 }
+.jqueryImageCompare>*[data-title]::after {
+    content:attr(data-title);
+    display:block;
+    box-sizing:border-box;
+    transition:all 0.3s linear;
+    position:absolute;
+    overflow:hidden;
+    top:auto;
+    bottom:0;
+    left:auto;
+    right:0;
+    width:calc( 100% / var(--index) );
+    text-align:center;
+    padding:10px 5px;
+    text-overflow:ellipsis;
+    color:#fff;
+    text-shadow:0 0 5px rgba(0,0,0,1);
+    font-size:1rem;
+    line-height:1.25rem;
+}
+.jqueryImageCompare>*[data-title]:hover::after {
+    width:100%;
+}
