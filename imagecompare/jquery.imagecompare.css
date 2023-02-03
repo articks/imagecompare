@@ -79,20 +79,16 @@
     box-sizing:border-box;
     transition:all 0.3s linear;
     position:absolute;
-    overflow:hidden;
-    top:auto;
-    bottom:0;
-    left:auto;
+    overflow:visible;
+    top:50%;
     right:0;
-    width:calc( 100% / var(--index) );
+    width:auto;
+    white-space:nowrap;
     text-align:center;
-    padding:10px 5px;
-    text-overflow:ellipsis;
+    padding:0;
     color:#fff;
-    text-shadow:0 0 5px rgba(0,0,0,1);
-    font-size:1rem;
+    text-shadow:0 0 0.5rem rgba(0,0,0,1);
+    font-size:1.25rem;
     line-height:1.25rem;
-}
-.jqueryImageCompare>*[data-title]:hover::after {
-    width:100%;
+    transform:translateY(-50%) translateX( calc( 50% - 1rem ) ) rotate(-90deg);
 }
