@@ -16,10 +16,10 @@ jQuery Multi Image Compare Plugin
 
 ```
 <ul class="jqueryImageCompare" data-ratio="5x3">
-    <li data-image="/path/to/image1.jpg"></li>
-    <li data-image="/path/to/image2.jpg"></li>
+    <li data-image="/path/to/image1.jpg" data-title="Image title"></li>
+    <li data-image="/path/to/image2.jpg" data-title="Image title"></li>
     ...
-    <li data-image="/path/to/imagen.jpg"></li>
+    <li data-image="/path/to/imagen.jpg" data-title="Image title"></li>
 </ul>
 ```
 
